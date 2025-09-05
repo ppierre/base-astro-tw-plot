@@ -10,9 +10,27 @@ import Layout from "../layouts/Layout.astro";
     <li><a href="#Gentoo">Gentoo</a></li>
     <li><a href="#Chinstrap">Chinstrap</a></li>
   </ul>
-  <div>
-    <div id="Adelie"><PlotPenguins species="Adelie" /></div>
-    <div id="Gentoo"><PlotPenguins species="Gentoo" /></div>
-    <div id="Chinstrap"><PlotPenguins species="Chinstrap" /></div>
+  <div class="flex overflow-x-auto gap-8 py-4 snap-x scroll-smooth">
+    <div
+      id="Adelie"
+      class="min-w-full snap-center bg-white rounded-lg shadow p-4"
+    >
+      <h2>Adelie</h2>
+      <PlotPenguins species="Adelie" />
+    </div>
+    <div
+      id="Gentoo"
+      class="min-w-full snap-center bg-white rounded-lg shadow p-4"
+    >
+      <h2>Gentoo</h2>
+      <PlotPenguins species="Gentoo" />
+    </div>
+    <div
+      id="Chinstrap"
+      class="min-w-full snap-center bg-white rounded-lg shadow p-4"
+    >
+      <h2>Chinstrap</h2>
+      <PlotPenguins species="Chinstrap" />
+    </div>
   </div>
 </Layout>
