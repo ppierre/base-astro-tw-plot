@@ -5,10 +5,20 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <h1 class="text-2xl">Test Astro et Plot (Observablehq)</h1>
-  <ul>
-    <li><a href="#Adelie">Adelie</a></li>
-    <li><a href="#Gentoo">Gentoo</a></li>
-    <li><a href="#Chinstrap">Chinstrap</a></li>
+  <ul class="flex gap-2">
+    <li>
+      <a class="text-red-600 border-2 rounded-full p-1" href="#Adelie">Adelie</a
+      >
+    </li>
+    <li>
+      <a class="text-red-600 border-2 rounded-full p-1" href="#Gentoo">Gentoo</a
+      >
+    </li>
+    <li>
+      <a class="text-red-600 border-2 rounded-full p-1" href="#Chinstrap"
+        >Chinstrap</a
+      >
+    </li>
   </ul>
   <div class="flex overflow-x-auto gap-8 py-4 snap-x scroll-smooth">
     <div
