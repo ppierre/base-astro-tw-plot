@@ -3,7 +3,12 @@ import PlotFigure from "../components/PlotFigure.astro";
 import * as Plot from "@observablehq/plot";
 import penguins from "../assets/penguins.json";
 
-const penguinsFiltred = penguins.filter((p) => p.species === "Gentoo");
+export interface Props {
+  species?: string;
+}
+
+const { species = "Gentoo" } = Astro.props;
+const penguinsFiltred = penguins.filter((p) => p.species === species);
 
 const options = {
   marks: [
