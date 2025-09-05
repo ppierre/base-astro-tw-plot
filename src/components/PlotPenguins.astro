@@ -8,11 +8,12 @@ export interface Props {
 }
 
 const { species = "Gentoo" } = Astro.props;
-const penguinsFiltred = penguins.filter((p) => p.species === species);
+//const penguinsFiltred = penguins.filter((p) => p.species === species);
 
 const options = {
   marks: [
-    Plot.dot(penguinsFiltred, {
+    Plot.dot(penguins, {
+      filter: (p) => p.species === species,
       x: "culmen_length_mm",
       y: "culmen_depth_mm",
       stroke: "species",
